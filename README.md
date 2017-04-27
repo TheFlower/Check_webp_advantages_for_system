@@ -2,25 +2,35 @@
 
 Description:
 ============
-找出android的升级包update.zip或target_files.zip的所有apk中超过指定大小的图片转换为webp后的体积瘦身．
+找出android的升级包update.zip或target_files.zip的所有apk中超过指定大小的图片转换为webp后的体积瘦身．包括每个apk的瘦身效果和整个update.zip包的瘦身效果．
 
 Usage:
 =========
+１．得到某个指定目录下webp的收益
 
-	python StartUpdateWebp.py dir [Specifiedsize] 
-
-	dir： 指定的目录,此目录为update.zip或target_files.zip解压后目录绝对路径．升级包中app priv-app的apk都将被转换．
-	Specifiedsize： 图片大小超过Specifiedsize才转换webp，默认Specifiedsize=50，Specifiedsize单位是KB,即超过50KB图片将转换为webp。
-
-	eg：python StartUpdateWebp.py  ~/update
-	
-	
-	
 	python updateWebp.py dir [Specifiedsize] 
+	
 	dir： 指定的目录,只转换指定目录
 	Specifiedsize： 图片大小超过Specifiedsize才转换webp，默认Specifiedsize=50，Specifiedsize单位是KB,即超过50KB图片将转换为webp。
 
 	eg：python updateWebp.py  ~/update/app/demo
+
+２．升级包中app priv-app中每个apk具体的webp收益
+
+	python StartUpdateWebp.py dir [Specifiedsize] 
+
+	dir： 指定的目录,此目录为update.zip或target_files.zip解压后目录绝对路径．升级包中app priv-app的apk将被转换．
+	Specifiedsize： 图片大小超过Specifiedsize才转换webp，默认Specifiedsize=50，Specifiedsize单位是KB,即超过50KB图片将转换为webp。
+
+	eg：python StartUpdateWebp.py  ~/update
+	
+３．升级包中app priv-app所有apk总的webp收益
+	
+	
+	python calcuUpdateWebp.py dir [Specifiedsize] 
+	
+	dir： 指定的目录,此目录为update.zip或target_files.zip解压后目录绝对路径．升级包中app priv-app的apk将被转换．
+	Specifiedsize： 图片大小超过Specifiedsize才转换webp，默认Specifiedsize=50，Specifiedsize单位是KB,即超过50KB图片将转换为webp。
 
 
 
