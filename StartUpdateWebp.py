@@ -97,6 +97,8 @@ def unzip(path):
     :param path:
     :return:
     """
+    if not os.path.isdir(path):
+        return
     apklist = os.listdir(path)
     for APK in apklist:
         zip_apk_path = os.path.join(path,APK)
@@ -115,6 +117,8 @@ if __name__ == '__main__':
         print "please input the dir of update or target "
         sys.exit(1)
 
+    unzip(dir+r'/system/app')
+    unzip(dir+r'/system/priv-app')
     unzip(dir+r'/SYSTEM/app')
     unzip(dir+r'/SYSTEM/priv-app')
     reload(sys)
