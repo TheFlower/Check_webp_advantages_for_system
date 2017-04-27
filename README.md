@@ -63,6 +63,12 @@ third method(build the cwebp yourself for linux):
 	sudo make install
 ```
 
+2."ImportError: No module named xlwt"
+Python：使用第三方库xlwt来写Excel，需要安装如下：
+	
+	pip install xlwt
+安装可参考官方文档：https://pypi.python.org/pypi/xlwt
+
 Discuss:
 ========
 tanhaiqing89@126.com
